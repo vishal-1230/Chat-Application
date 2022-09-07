@@ -1,0 +1,554 @@
+.dashboard{
+  display: flex;
+  flex-direction: row;
+}
+
+*{
+  font-family: 'Gilroy';
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 100;
+  src: url(gilroy/Gilroy-Thin.ttf);
+}
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 200;
+  src: url(gilroy/Gilroy-UltraLight.ttf);
+}
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 300;
+  src: url(gilroy/Gilroy-Light.ttf);
+}
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 400;
+  src: url(gilroy/Gilroy-Regular.ttf);
+}
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 500;
+  src: url(gilroy/Gilroy-Medium.ttf);
+}
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 600;
+  src: url(gilroy/Gilroy-SemiBold.ttf);
+}
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 700;
+  src: url(gilroy/Gilroy-ExtraBold.ttf);
+}
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 800;
+  src: url(gilroy/Gilroy-Heavy.ttf);
+}
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 900;
+  src: url(gilroy/Gilroy-Black.ttf);
+}
+
+
+.navbar{
+  height: 100vh;
+  width: 105px;
+  background: #fff;
+  border-right: #aaa 0.3px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: x-large;
+  transition-duration: 300ms;
+}
+
+#menuicon{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 35px;
+  border-radius: 50%;
+}
+
+#menuExpand{
+  display: none;
+}
+
+.navitems{
+  height: 350px;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: x-large;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 220px;
+  color: #888;
+}
+
+.navitem{
+  border-radius: 50%;
+  padding: 6px;
+  transition-duration: 100ms;
+  display: inline;
+}
+
+.navLabels{
+  /* font-size: 17px; */
+  font-size: 15px;
+  font-weight: 700;
+  vertical-align: super;
+  margin: 0;
+  position: relative;
+  left: 18px;
+  bottom: 4px;
+  padding: 0;
+  display: none;
+}
+
+.navitem:hover{
+  color: #6c5ce7;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.navitem:active{
+  color: #5d4aee;
+  background-color: #ccc;
+}
+
+/* ######################################################################################################################## */
+/* ######################################################################################################################## */
+/* ######################################################################################################################## */
+
+
+.chatlist{
+  height: 100vh;
+  /* width: 750px; */
+  width: 450px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.chatsheader{
+  padding: 25px 0;
+  padding-left: 25px;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: 'Gilroy';
+  border-bottom: #999 0.2px solid;
+  user-select: none;
+  
+}
+
+.chatcontact{
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  min-height: 80px;
+  background: #fff;
+  align-items: center;
+  border-bottom: #bbb 0.1px solid;
+  cursor: pointer;
+  user-select: none;
+  transition-duration: 150ms;
+
+}
+.chatcontact:hover{
+  background-color: #6c5ce7;
+  color: #fff;
+}
+.chatcontact:active{
+  background-color: #5844f0;
+}
+
+.chatlist2{
+  overflow-y: auto;
+}
+
+.chatlist2::-webkit-scrollbar{
+  background-color: #bbb;
+  width: 9px;
+}
+
+.chatlist2::-webkit-scrollbar-thumb{
+  background: #444;
+  border-radius: 9px;
+}
+
+.chatlist2::-webkit-scrollbar-thumb:hover{
+  background-color: #222;
+}
+
+
+#logo1{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #000;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+#contactname{
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Gilroy';
+}
+
+#chatcontacttxt{
+  flex-grow: 1;
+  height: fit-content;
+  margin-left: 14px;
+  vertical-align: middle;
+  font-weight: 500;
+  font-family: 'Gilroy';
+}
+
+#lastmsg{
+  font-size: 12px;
+}
+
+#newMsgIcon{
+  position: absolute;
+  bottom: 35px;
+  left: 28%;
+  font-size: 25px;
+  color: white;
+  background: #5844f0;
+  padding: 10px;
+  border-radius: 11px;
+  box-shadow: 0px 0px 20px 4px rgba(0,0,0,0.6);
+  z-index: 6;
+  cursor: pointer;
+}
+
+
+/* ######################################################################################################################## */
+/* ######################################################################################################################## */
+/* ######################################################################################################################## */
+/* ######################################################################################################################## */
+
+.chatscreen{
+  height: 100vh;
+  background: #fff;
+  flex-grow: 1;
+  border-left: #bbb 0.5px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chatdetail{
+  display: flex;
+  flex-direction: row;
+  /* height: 117px; */
+  /* height: 90px; */
+  padding: 19px 0;
+  padding-left: 30px;
+  background: #fff;
+  align-items: center;
+  border-bottom: #999 0.3px solid;
+  z-index: 0;
+  box-shadow: 0px 0px 23px 0px rgba(0,0,0,0.4);
+}
+
+#logo2{
+  
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.chatdetailtxt{
+  height: fit-content;
+  margin-left: 17px;
+}
+
+#chatdetailname{
+  height: fit-content;
+  font-size: large;
+  margin: 0;
+  padding: 0;
+  font-family: 'Gilroy';
+}
+
+#chatdetaillastseen{
+  font-size: smaller;
+  margin: 0;
+  font-family: 'Gilroy';
+
+}
+
+#chatdetailmenu{
+  font-size: larger;
+  position: absolute;
+  right: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition-duration: 100ms;
+  padding: 7px;
+}
+#chatdetailmenu:hover{
+  color: #6c5ce7;
+  background: #ddd;
+}
+#chatdetailmenu:active{
+  color: #5844f0;
+  background: #ccc;
+}
+
+.chatsarea{
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.sendmsgarea{
+  height: 80px;
+  background: #fff;
+  border-top: #999 0.5px solid;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#msginput{
+  padding: 13px;
+  font-size: 14px;
+  border-radius: 25px;
+  height: fit-content;
+  outline: 0;
+  border: 0.5px #bbb solid;
+  flex-grow: 1;
+}
+#msginput:hover{
+  border: #6c5ce7 0.5px solid;
+}
+#msginput:focus{
+  border:#5844f0 1px solid;
+}
+
+#sendBtn{
+  transform: rotate(90deg);
+  color: #fff;
+  background: #5844f0;
+  width: 25px;
+  height: 25px;
+  padding: 8px;
+  font-size: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 10px;
+}
+#sendBtn:hover{
+  border: #5844f0 2px solid;
+  background: #fff;
+  color: #5844f0;
+  /* transition-timing-function: ease-in-out; */
+  transition-duration: 150ms;
+}
+
+#emoji{
+  font-size: 44px;
+  color: #6c5ce7;
+  margin: 0 7px;
+  padding: 3px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition-duration: 100ms;
+}
+#emoji:hover{
+  background: #ccc;
+  color: #5844f0;
+}
+#emoji:active{
+  background-color: #bbb;
+}
+
+#attachicon{
+  font-size: 39px;
+  color: #6c5ce7;
+  padding: 3px;
+  border-radius: 50%;
+  /* margin-left: 7px; */
+  margin-right: 7px;
+  cursor: pointer;
+}
+#attachicon:hover{
+  background-color: #ccc;
+  color: #5844f0;
+  transition-duration: 100ms;
+}
+#attachicon:active{
+  background-color: #bbb;
+}
+
+#attach{
+  visibility: hidden;
+  width: 0;
+}
+
+.msgme{
+  padding: 12px 16px;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  background: #6c5ce7;
+  color: rgb(255, 255, 255);
+  width: fit-content;
+  max-width: 40%;
+  margin: 8px 0;
+  margin-right: 10px;
+  /* float: right; */
+  display: block;
+  height: fit-content;
+  margin-left: auto;
+  word-wrap: break-word;
+  box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.3);
+}
+
+.chatsarea{
+  background-image: url(images/bg/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 20px;
+  overflow-y: auto;
+}
+
+.chatsarea::-webkit-scrollbar{
+  background-color: #bbb;
+  width: 9px;
+}
+
+.chatsarea::-webkit-scrollbar-thumb{
+  background: #444;
+  border-radius: 9px;
+}
+
+.chatsarea::-webkit-scrollbar-thumb:hover{
+  background-color: #222;
+}
+
+.msghe{
+  padding: 12px 16px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  background: white;
+  color: #000;
+  max-width: 40%;
+  width: fit-content;
+  margin: 8px 0;
+  margin-left: 10px;
+  height: fit-content;
+  box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.3);
+  overflow-wrap: break-word;
+}
+
+.welcome{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+#msgslogo{
+  height: 100vh;
+  width: auto;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.left{
+  background: #ac82ff;
+  height: 100vh;
+  width: 50vw;
+}
+
+.right{
+  height: 100vh;
+  width: 50vw;
+}
+
+/* ######################################################################################################################## */
+/* ######################################################################################################################## */
+/* ######################################################################################################################## */
+
+
+.signbox{
+  width: fit-content;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 50px;
+  padding-top: 30px;
+  padding-bottom: 45px;
+  border-radius: 20px;
+  background: #ac82ff;
+}
+
+.signbox input{
+  padding: 10px 16px;
+  border-radius: 13px;
+  outline: none;
+  border: #999 0.5px solid;
+  width: 280px;
+  margin-top: 5px;
+}
+
+.signbox button{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 18px;
+  background: transparent;
+  border-radius: 10px;
+  border: #fff 3px solid;
+  color: #fff;
+  outline: none;
+  transition-duration: 150ms;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.signbox button:hover{
+  border: #6c5ce7 3px solid;
+  color: #6c5ce7;
+  background-color: #fff;
+}
+.signbox button:active{
+  border: #5844f0 2px solid;
+  color: #5844f0;
+  font-size: 15px;
+}
+
+.signbox label{
+  padding: 8px;
+  font-weight: 500;
+}
+
+.btmtext{
+  float: right;
+}
+
+.signuplogin{
+  cursor: pointer;
+  color: #5e17eb;
+  font-weight: 600;
+}

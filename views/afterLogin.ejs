@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const exists='<%=exists%>'
+        const correct='<%=correct%>'
+        const key='<%=key%>'
+        if (exists.toString()=='false'){
+            alert("User Don't Exist")
+            window.location.href='http://127.0.0.1:3000/'
+        }else{
+            if (correct.toString()=='false'){
+                alert("Wrong Password")
+                window.location.href='http://127.0.0.1:3000/'
+            }else{
+                alert(key)
+                const datetime=new Date()
+                datetime.setTime(datetime.getTime()+21600000)
+                document.cookie=`key=${key}; expires=${datetime.toUTCString()}`
+                window.location.href='http://127.0.0.1:3000/dashboard'
+            }
+        }
+    </script>
+</body>
+</html>
